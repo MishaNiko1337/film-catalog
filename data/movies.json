@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Incepcja2",
+    "director": "Christopher Nolan",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": "Świetny film z zaskakującym zakończeniem."
+  },
+  {
+    "id": 2,
+    "title": "Matrix",
+    "director": "Lana i Lilly Wachowski",
+    "rating": 10,
+    "status": "obejrzane",
+    "review": "Very good!"
+  }
+]

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+  <h1 class="mb-4 text-primary"><%= title %></h1>
+
+  <% popular.forEach(film => { %>
+    <div class="card mb-3 bg-dark text-white border border-secondary">
+      <div class="card-body">
+        <h5 class="card-title"><%= film.title %></h5>
+        <p class="card-text">
+          Reżyser: <%= film.director %><br>
+          Ocena: <%= film.rating %>/10<br>
+          Status: <%= film.status %><br>
+          Recenzja: <%= film.review || "Brak" %>
+        </p>
+        <form action="/popular/add" method="POST">
+          <% for (let key in film) { %>
+            <input type="hidden" name="<%= key %>" value="<%= film[key] %>">
+          <% } %>
+          <button type="submit" class="btn btn-success">Dodaj do mojej kolekcji</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+
+  <a href="/home" class="btn btn-outline-secondary">← Powrót</a>
+</body>
+</html>

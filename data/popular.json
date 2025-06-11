@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Incepcja",
+    "director": "Christopher Nolan",
+    "rating": 9,
+    "status": "w trakcie",
+    "review": "Kultowy film sci-fi"
+  },
+  {
+    "title": "Matrix",
+    "director": "Wachowski",
+    "rating": 10,
+    "status": "obejrzane",
+    "review": ""
+  },
+  {
+    "title": "Interstellar",
+    "director": "Christopher Nolan",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": ""
+  },
+  {
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": "Klasyk z twistem"
+  },
+  {
+    "title": "Fight Club",
+    "director": "David Fincher",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": "Pierwsza zasada to..."
+  },
+  {
+    "title": "Skazani na Shawshank",
+    "director": "Frank Darabont",
+    "rating": 10,
+    "status": "obejrzane",
+    "review": ""
+  },
+  {
+    "title": "Forrest Gump",
+    "director": "Robert Zemeckis",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": "Życie to pudełko czekoladek"
+  },
+  {
+    "title": "Gladiator",
+    "director": "Ridley Scott",
+    "rating": 8,
+    "status": "w trakcie",
+    "review": ""
+  },
+  {
+    "title": "Zielona mila",
+    "director": "Frank Darabont",
+    "rating": 10,
+    "status": "obejrzane",
+    "review": "Poruszający dramat"
+  },
+  {
+    "title": "Batman: Mroczny Rycerz",
+    "director": "Christopher Nolan",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": "Heath Ledger!"
+  },
+  {
+    "title": "Parasite",
+    "director": "Bong Joon-ho",
+    "rating": 9,
+    "status": "w trakcie",
+    "review": "Oscary zasłużone"
+  },
+  {
+    "title": "Coco",
+    "director": "Lee Unkrich",
+    "rating": 8,
+    "status": "w trakcie",
+    "review": "Animacja z duszą"
+  },
+  {
+    "title": "Avengers: Koniec gry",
+    "director": "Anthony i Joe Russo",
+    "rating": 8,
+    "status": "obejrzane",
+    "review": ""
+  },
+  {
+    "title": "Spider-Man: Bez drogi do domu",
+    "director": "Jon Watts",
+    "rating": 8,
+    "status": "w trakcie",
+    "review": ""
+  },
+  {
+    "title": "Władca Pierścieni: Powrót Króla",
+    "director": "Peter Jackson",
+    "rating": 10,
+    "status": "obejrzane",
+    "review": ""
+  },
+  {
+    "title": "La La Land",
+    "director": "Damien Chazelle",
+    "rating": 8,
+    "status": "obejrzane",
+    "review": "Muzyczny romans"
+  },
+  {
+    "title": "Whiplash",
+    "director": "Damien Chazelle",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": "Napięcie i rytm"
+  },
+  {
+    "title": "Django",
+    "director": "Quentin Tarantino",
+    "rating": 9,
+    "status": "obejrzane",
+    "review": ""
+  },
+  {
+    "title": "Ojciec chrzestny",
+    "director": "Francis Ford Coppola",
+    "rating": 10,
+    "status": "obejrzane",
+    "review": "Mafia i rodzina"
+  },
+  {
+    "title": "Titanic",
+    "director": "James Cameron",
+    "rating": 9,
+    "status": "w trakcie",
+    "review": ""
+  }
+]

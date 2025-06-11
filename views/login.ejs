@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+  <h1 class="mb-4 text-primary">🔐 <%= title %></h1>
+
+  <form action="/login" method="POST" class="mb-3">
+    <div class="mb-3">
+      <label class="form-label">Email:</label>
+      <input type="email" name="email" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Hasło:</label>
+      <input type="password" name="password" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary rounded-pill px-4">Zaloguj się</button>
+  </form>
+
+  <p>Nie masz konta? <a href="/register">Zarejestruj się</a></p>
+</body>
+</html>
