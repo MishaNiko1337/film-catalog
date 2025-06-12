@@ -15,28 +15,28 @@ router.get('/add', requireLogin, (req, res) => {
 });
 
 router.post('/add', requireLogin, (req, res) => {
-  Movie.add(req.body, req.session.user.id);
+  Movie.add(req.body);
   res.redirect('/home');
 });
 
 router.get('/edit/:id', requireLogin, (req, res) => {
   const movie = Movie.getById(parseInt(req.params.id));
-  if (movie.userId !== req.session.user.id) return res.redirect('/home');
+  if (!movie) return res.redirect('/home');
   res.render('edit', { title: 'Edytuj film', movie });
 });
 
 router.post('/edit/:id', requireLogin, (req, res) => {
-  Movie.update(parseInt(req.params.id), req.body, req.session.user.id);
+  Movie.update(parseInt(req.params.id), req.body);
   res.redirect('/home');
 });
 
 router.post('/toggle-status/:id', requireLogin, (req, res) => {
-  Movie.toggleStatus(parseInt(req.params.id), req.session.user.id);
+  Movie.toggleStatus(parseInt(req.params.id));
   res.redirect('/home');
 });
 
 router.post('/delete/:id', requireLogin, (req, res) => {
-  Movie.delete(parseInt(req.params.id), req.session.user.id);
+  Movie.delete(parseInt(req.params.id));
   res.redirect('/home');
 });
 
@@ -47,8 +47,23 @@ router.get('/popular', requireLogin, (req, res) => {
 });
 
 router.post('/popular/add', requireLogin, (req, res) => {
-  const { title, director, rating, status, review } = req.body;
-  Movie.add({ title, director, rating, status, review }, req.session.user.id);
+  const { title, director, rating, status } = req.body;
+  Movie.add({ title, director, rating, status });
+  res.redirect('/home');
+});
+
+router.get('/review/:id', requireLogin, (req, res) => {
+  const movie = Movie.getById(parseInt(req.params.id));
+  if (!movie) return res.redirect('/home');
+  res.render('review', { movie });
+});
+
+router.post('/review/:id', requireLogin, (req, res) => {
+  const movieId = parseInt(req.params.id);
+  const { rating, text } = req.body;
+  const { id, email } = req.session.user;
+
+  Movie.addReview(movieId, id, email, parseInt(rating), text);
   res.redirect('/home');
 });
 

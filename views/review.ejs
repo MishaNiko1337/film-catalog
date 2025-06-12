@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dodaj recenzję</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+  <h1 class="mb-4">Dodaj recenzję do filmu: <%= movie.title %></h1>
+
+  <form action="/review/<%= movie.id %>" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Ocena (1–10):</label>
+      <input type="number" name="rating" class="form-control" min="1" max="10" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Treść recenzji:</label>
+      <textarea name="text" rows="3" class="form-control" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Zapisz recenzję</button>
+    <a href="/home" class="btn btn-secondary ms-2">Anuluj</a>
+  </form>
+</body>
+</html>

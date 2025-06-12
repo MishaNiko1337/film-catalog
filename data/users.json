@@ -1,5 +1,10 @@
 [
   {
+    "id": 1,
+    "email": "admin@example.com",
+    "password": "$2b$10$sz17qhuNTdbsTxhRpD883..k86kXxY7e.mesZrRL8e4r1t4uiKcz."
+  },
+  {
     "id": 1748185081527,
     "email": "blablapus@gmail.com",
     "password": "$2b$10$JhFLa0WMn15avfqFutShF..ASzSPaXgUqv2XRp7.ozifcSbTY/x2K"

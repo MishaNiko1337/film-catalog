@@ -6,52 +6,57 @@ Internetowa aplikacja do zarządzania kolekcją filmów, stworzona w Node.js, Ex
 
 ## 📖 Opis Projektu
 
-Aplikacja umożliwia użytkownikom zarządzanie swoją prywatną bazą filmów poprzez:
+Aplikacja umożliwia użytkownikom zarządzanie swoją prywatną bazą filmów oraz przeglądanie i komentowanie filmów dostępnych w ogólnym katalogu:
 
-- Dodawanie filmów z tytułem, reżyserem, oceną i recenzją
-- Zmianę statusu filmu: **obejrzane** / **w trakcie**
-- Edycję oraz trwałe usuwanie pozycji z kolekcji
-- Oddzielne kolekcje filmów dla każdego użytkownika
-- Stylizowany interfejs w trybie **ciemnym** (Bootswatch Darkly)
-- Rejestrację, logowanie i bezpieczne przechowywanie sesji
+- Dodawanie filmów z tytułem, reżyserem, oceną i statusem  
+- Publiczny katalog filmów dostępny dla każdego użytkownika  
+- Możliwość dodawania recenzji do dowolnego filmu (widocznych publicznie)  
+- Zmiana statusu filmu: **obejrzane** / **w trakcie**  
+- Edycja i trwałe usuwanie pozycji z katalogu  
+- Stylizowany interfejs w trybie **ciemnym** (Bootswatch Darkly)  
+- Rejestracja, logowanie i bezpieczne przechowywanie sesji  
 
 ---
 
 ## 👥 Zarządzanie Użytkownikami
 
-- **Rejestracja Użytkowników** – Tworzenie kont z bezpiecznym hashowaniem haseł (bcryptjs)
-- **Logowanie i Wylogowanie** – Bezpieczna sesja dla każdego użytkownika
-- **Przechowywanie Sesji** – Za pomocą `session-file-store` (nawet po restarcie serwera)
+- **Rejestracja** – Tworzenie konta z haszowaniem haseł (`bcryptjs`)  
+- **Logowanie i Wylogowanie** – Bezpieczna sesja per użytkownik  
+- **Trwałość sesji** – Dzięki `session-file-store`, sesje przetrwają restart serwera  
 
 ---
 
-## 🎞️ Zarządzanie Filmami
+## 🗣️ System Recenzji
 
-- **Dodawanie Filmu** – Formularz z walidacją danych (tytuł, reżyser, ocena, status, recenzja)
-- **Edycja Filmu** – Możliwość aktualizacji informacji o filmie
-- **Zmiana Statusu** – Przełączanie między "obejrzane" a "w trakcie"
-- **Usuwanie Filmu** – Trwałe usunięcie z kolekcji
-- **Własność** – Każdy film przypisany jest do konkretnego użytkownika
+- Każdy użytkownik może dodać recenzję do dowolnego filmu  
+- Recenzje są publiczne i widoczne dla wszystkich (email, ocena, komentarz)  
+- Recenzje są trwale zapisywane w pliku `movies.json`  
 
 ---
 
 ## 🛠️ Uruchomienie Aplikacji
 
 1. **Zainstaluj zależności:**
-
 ```bash
 npm install
 ```
 
 2. **Uruchom aplikację w trybie developerskim:**
-
 ```bash
 npm run dev
 ```
 
 3. **Otwórz w przeglądarce:**
-
 [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧪 Dane Testowe
+
+Można się zarejestrować lub użyć użytkownika domyślnego:
+
+- **Email:** `admin@example.com`  
+- **Hasło:** `admin123`
 
 ---
 
@@ -60,42 +65,34 @@ npm run dev
 ```
 film-catalog/
 ├── controllers/         # Logika aplikacji (kontrolery)
-├── models/              # Praca z danymi (movies.json)
-├── routes/              # Trasy Express.js
-├── views/               # Widoki EJS (SSR)
-├── public/css/          # Stylizacja (Bootswatch + custom)
-├── data/movies.json     # Dane filmów
-├── sessions/            # Dane sesji użytkowników
-├── index.js             # Główny serwer
+├── models/              # Obsługa danych (User.js, Movie.js)
+├── routes/              # Routing Express
+├── views/               # Widoki EJS
+├── public/css/          # Stylizacja (Bootswatch + custom CSS)
+├── data/                # Pliki: movies.json, users.json, popular.json
+├── sessions/            # Dane sesji (gitignore)
+├── index.js             # Serwer główny
 ```
 
 ---
 
-## 📦 Technologie i biblioteki
+## 📦 Technologie i Biblioteki
 
-- **Node.js**, **Express.js**, **EJS**
-- **express-session** + **session-file-store**
-- **bcryptjs**
-- **Bootswatch Darkly**
-
----
-
-## 🧪 Dane Testowe
-
-Możesz się zarejestrować lub użyć konta testowego:
-
-- Email: `test@example.com`
-- Hasło: `1234`
+- `Node.js`, `Express.js`, `EJS`  
+- `bcryptjs`, `express-session`, `session-file-store`  
+- `Bootswatch@Darkly`  
 
 ---
 
 ## 🔒 Uwaga Bezpieczeństwa
 
-Plik `sessions/` został dodany do `.gitignore`.  
-Zalecane: nie wysyłać go na GitHub ani Moodle.
+- Folder `sessions/` został wykluczony w `.gitignore`  
+- Hasła użytkowników są przechowywane w postaci zaszyfrowanej (bcrypt)  
+- Plik `users.json` zawiera użytkownika `admin@example.com` gotowego do logowania  
 
 ---
 
 ## 👨‍🎓 Autor
 
-Projekt indywidualny zaliczeniowy — student kierunku Informatyka.
+Indywidualny projekt zaliczeniowy —  
+**Mikhail Nikalayenka**, kierunek: Informatyka, UEHS.

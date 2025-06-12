@@ -5,7 +5,20 @@
     "director": "Christopher Nolan",
     "rating": 9,
     "status": "obejrzane",
-    "review": "Świetny film z zaskakującym zakończeniem."
+    "reviews": [
+      {
+        "userId": 1,
+        "email": "admin@example.com",
+        "rating": 9,
+        "text": "Świetny film z zaskakującym zakończeniem."
+      },
+      {
+        "userId": 1748185081527,
+        "email": "blablapus@gmail.com",
+        "rating": 8,
+        "text": "Very good!"
+      }
+    ]
   },
   {
     "id": 2,
@@ -13,6 +26,28 @@
     "director": "Lana i Lilly Wachowski",
     "rating": 10,
     "status": "obejrzane",
-    "review": "Very good!"
+    "reviews": [
+      {
+        "userId": 1,
+        "email": "admin@example.com",
+        "rating": 10,
+        "text": "Very good!"
+      }
+    ]
+  },
+  {
+    "id": 1749721182951,
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "rating": 9,
+    "status": "obejrzane",
+    "reviews": [
+      {
+        "userId": 1749673992980,
+        "email": "blablapus1@gmail.com",
+        "rating": 9,
+        "text": "The best movie"
+      }
+    ]
   }
 ]
