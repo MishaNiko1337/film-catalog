@@ -25,6 +25,7 @@ class Movie {
       director: data.director,
       rating: parseInt(data.rating),
       status: data.status || 'w trakcie',
+      review: data.review || '',
       reviews: []
     };
     Movie.saveAll([...movies, newMovie]);
@@ -39,7 +40,8 @@ class Movie {
           title: newData.title,
           director: newData.director,
           rating: parseInt(newData.rating),
-          status: newData.status
+          status: newData.status,
+          review: newData.review || ''
         };
       }
       return movie;
@@ -48,8 +50,8 @@ class Movie {
   }
 
   static delete(id) {
-    const movies = Movie.getAll().filter(movie => movie.id !== id);
-    Movie.saveAll(movies);
+    const filtered = Movie.getAll().filter(movie => movie.id !== id);
+    Movie.saveAll(filtered);
   }
 
   static toggleStatus(id) {

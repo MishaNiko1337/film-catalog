@@ -1,52 +1,44 @@
 [
   {
     "id": 1,
-    "title": "Incepcja2",
+    "title": "Incepcja",
     "director": "Christopher Nolan",
     "rating": 9,
     "status": "obejrzane",
+    "review": "Świetny film sci-fi!",
     "reviews": [
-      {
-        "userId": 1,
-        "email": "admin@example.com",
-        "rating": 9,
-        "text": "Świetny film z zaskakującym zakończeniem."
-      },
       {
         "userId": 1748185081527,
         "email": "blablapus@gmail.com",
-        "rating": 8,
-        "text": "Very good!"
+        "rating": 9,
+        "text": "Zdecydowanie wart obejrzenia."
       }
-    ]
+    ],
+    "userId": 1748185081527
   },
   {
     "id": 2,
     "title": "Matrix",
-    "director": "Lana i Lilly Wachowski",
-    "rating": 10,
-    "status": "obejrzane",
-    "reviews": [
-      {
-        "userId": 1,
-        "email": "admin@example.com",
-        "rating": 10,
-        "text": "Very good!"
-      }
-    ]
+    "director": "Lana Wachowski",
+    "rating": 8,
+    "status": "w trakcie",
+    "review": "",
+    "reviews": [],
+    "userId": 1748185081527
   },
   {
-    "id": 1749721182951,
-    "title": "Pulp Fiction",
-    "director": "Quentin Tarantino",
+    "id": 1749727573694,
+    "title": "Interstellar",
+    "director": "Christopher Nolan",
     "rating": 9,
     "status": "obejrzane",
+    "review": "",
     "reviews": [
       {
-        "userId": 1749673992980,
-        "email": "blablapus1@gmail.com",
-        "rating": 9,
-        "text": "The best movie"
+        "userId": 1749674024882,
+        "email": "blablapus2@gmail.com",
+        "rating": 10,
+        "text": "Very good!"
       }
     ]
   }
